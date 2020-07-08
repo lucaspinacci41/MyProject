@@ -14,7 +14,7 @@
        
    - name: Copy local file to dir /root/demo_directory_created_through_awx
      copy:
-       src: ~/tmp/mcxptt_deploy_20f25_1145_ldo.tgz
+       src: /tmp/mcxptt_deploy_20f25_1145_ldo.tgz
        dest: ~/demo_directory_created_through_awx/prova.sh
        remote_src: no
        
