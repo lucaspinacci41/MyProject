@@ -17,9 +17,6 @@
      copy:
        src: ~/tmp/prova.sh
        dest: ~/demo_directory_created_through_awx/prova.sh
-       owner: root
-       group: root       
-       mode: u+rw,g-wx,o-rwx
        become: True
        
 ###   - name: Delete directory
