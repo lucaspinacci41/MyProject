@@ -12,11 +12,11 @@
        path: ~/demo_directory_created_through_awx
        state: directory
        
-   - name: Copy local file /root/get-pip.py in remote dir /root/demo_directory_created_through_awx
+   - name: Copy local file /tmp/prova.txt in remote dir /root/demo_directory_created_through_awx
      copy:
        src: ~/tmp/prova.txt
        dest: ~/demo_directory_created_through_awx/prova.sh
-       remote_src: False
+       remote_src: no
        
 ###   - name: Delete directory
 ###     file:
