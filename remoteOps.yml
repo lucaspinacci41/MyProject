@@ -8,7 +8,7 @@
        state: directory
    - name: Copy local file /root/get-pip.py in remote dir /root/demo_directory_created_through_awx
      copy:
-       src: /root/prova.sh
+       src: /tmp/prova.sh
        dest: ~/demo_directory_created_through_awx/prova.sh
        mode: u+rw,g-wx,o-rwx
 ###   - name: Delete directory
