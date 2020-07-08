@@ -1,2 +1,2 @@
 # MyProject
-Iniital commit
+Inital commit
