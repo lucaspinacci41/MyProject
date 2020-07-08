@@ -1,11 +1,17 @@
 - name: create_directory
   hosts: all
   tasks:
+   - command: "ls -lah /opt/stack/tempest"
+     register: dir_out
+
+   - debug: var={{item}}
+     with_items: dir_out.stdout_lines
 
    - name: Creates directory
      file:
        path: ~/demo_directory_created_through_awx
        state: directory
+       become: True
    - name: Copy local file /root/get-pip.py in remote dir /root/demo_directory_created_through_awx
      copy:
        src: ~/tmp/prova.sh
@@ -13,6 +19,7 @@
        owner: root
        group: root       
        mode: u+rw,g-wx,o-rwx
+       become: True
 ###   - name: Delete directory
 ###     file:
 ###       path: ~/demo_directory_created_through_awx
