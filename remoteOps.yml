@@ -10,7 +10,7 @@
      copy:
        src: /root/get-pip.py
        dest: //demo_directory_created_through_awx/get-pip.py
-    mode: u+rw,g-wx,o-rwx
+       mode: u+rw,g-wx,o-rwx
 ###   - name: Delete directory
 ###     file:
 ###       path: ~/demo_directory_created_through_awx
