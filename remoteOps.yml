@@ -2,7 +2,7 @@
 - name: remote operations
   hosts: all
   vars:
-    base_dir: "{{ lookup('env','PWD') }}"
+    base_dir: "{{ lookup('env','PWD') }}/22"
   tasks:
     - name: read the content of dir /tmp/
       command: "ls -lah /tmp/"
