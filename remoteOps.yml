@@ -1,6 +1,6 @@
-- name: remote operations
+###- name: remote operations
   hosts: all
-  tasks: remote operations  
+  tasks:
     - name: read the content of dir /tmp/
       command: "ls -lah /tmp/"
       register: dir_out
