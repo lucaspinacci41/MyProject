@@ -1,4 +1,4 @@
-- name: create_directory
+- name: remote operations
   hosts: all
   tasks: read the content of directory /tmp/ on theremote host 
    - command: "ls -lah /tmp/"
@@ -18,7 +18,7 @@
        dest: ~/demo_directory_created_through_awx
        remote_src: yes
        
-   - name: Store file into /tmp/fetched/host.example.com/tmp/somefile
+   - name: Store remote file into /tmp/
      fetch:
        src: /tmp/yum.log
        dest: /tmp/
