@@ -1,13 +1,13 @@
 - name: remote operations
   hosts: all
   tasks: remote operations  
-  - name: read the content of dir /tmp/
-    command: "ls -lah /tmp/"
-    register: dir_out
-
-  - debug: var={{item}}
-    with_items: dir_out.stdout_lines
-
+###  - name: read the content of dir /tmp/
+###    command: "ls -lah /tmp/"
+###    register: dir_out
+###
+###  - debug: var={{item}}
+###    with_items: dir_out.stdout_lines
+###
   - name: Creates directory
     file:
       path: ~/demo_directory_created_through_awx
