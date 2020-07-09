@@ -2,7 +2,8 @@
   hosts: all
   tasks: remote operations
   
-   - command: "ls -lah /tmp/"
+   - name: read the content of dir /tmp/
+     command: "ls -lah /tmp/"
      register: dir_out
 
    - debug: var={{item}}
