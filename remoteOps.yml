@@ -1,30 +1,28 @@
 - name: remote operations
   hosts: all
-  tasks: remote operations
-  
-   - name: read the content of dir /tmp/
-     command: "ls -lah /tmp/"
-     register: dir_out
+  tasks: remote operations  
+  - name: read the content of dir /tmp/
+    command: "ls -lah /tmp/"
+    register: dir_out
 
-   - debug: var={{item}}
-     with_items: dir_out.stdout_lines
+  - debug: var={{item}}
+    with_items: dir_out.stdout_lines
 
-   - name: Creates directory
-     file:
-       path: ~/demo_directory_created_through_awx
-       state: directory
+  - name: Creates directory
+    file:
+      path: ~/demo_directory_created_through_awx
+      state: directory
        
-   - name: Copy in remote host file from /tmp/ to dir /root/demo_directory_created_through_awx
-     copy:
-       src: /tmp/mcxptt_deploy_20f25_1145_ldo.tgz
-       dest: ~/demo_directory_created_through_awx
-       remote_src: yes
+  - name: Copy in remote host file from /tmp/ to dir /root/demo_directory_created_through_awx
+    copy:
+      src: /tmp/mcxptt_deploy_20f25_1145_ldo.tgz
+      dest: ~/demo_directory_created_through_awx
+      remote_src: yes
        
 ###   - name: Store remote file into /tmp/
 ###     fetch:
 ###       src: /tmp/yum.log
-###       dest: /tmp/
-       
+###       dest: /tmp/     
 ###   - name: Delete directory
 ###     file:
 ###       path: ~/demo_directory_created_through_awx
