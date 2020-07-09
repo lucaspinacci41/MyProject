@@ -1,8 +1,6 @@
 ---
 - name: remote operations
   hosts: all
-  vars:
-    base_dir: "{{ lookup('env','PWD') }}/22"
   tasks:
     - name: read the content of dir /tmp/
       command: "ls -lah /tmp/"
@@ -24,7 +22,7 @@
 
     - name: Copy from local /tmp/ to remote directoty
       copy:
-        src: "{{ base_dir }}/prova.txt"
+        src: ~/prova/prova.txt
         dest: ~/demo_directory_created_through_awx
         remote_src: no
 
