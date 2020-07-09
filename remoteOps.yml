@@ -1,6 +1,7 @@
 - name: remote operations
   hosts: all
-  tasks: read the content of directory /tmp/ on theremote host 
+  tasks: remote operations
+  
    - command: "ls -lah /tmp/"
      register: dir_out
 
