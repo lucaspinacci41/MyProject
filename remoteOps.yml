@@ -1,4 +1,5 @@
-###- name: remote operations
+---
+- name: remote operations
   hosts: all
   tasks:
     - name: read the content of dir /tmp/
