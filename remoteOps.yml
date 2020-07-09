@@ -18,10 +18,10 @@
        dest: ~/demo_directory_created_through_awx
        remote_src: yes
        
-   - name: Store remote file into /tmp/
-     fetch:
-       src: /tmp/yum.log
-       dest: /tmp/
+###   - name: Store remote file into /tmp/
+###     fetch:
+###       src: /tmp/yum.log
+###       dest: /tmp/
        
 ###   - name: Delete directory
 ###     file:
