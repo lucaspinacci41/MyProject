@@ -23,12 +23,12 @@
     - name: Download dir app
       get_url:
         url: https://github.com/lucaspinacci41/MyProject/raw/master/app/MCXPTT_CLIENT_1_2_2_20F23_1636_b844_LDO.apk
-        dest: ~/mcxptt_deploy_20F25_1145_LDO/app
+        dest: ~/mcxptt_deploy_20F25_1145_LDO/app/
 
     - name: Download dir documentation
       get_url:
         url: https://raw.githubusercontent.com/lucaspinacci41/MyProject/master/documentation
-        dest: ~/mcxptt_deploy_20F25_1145_LDO
+        dest: ~/mcxptt_deploy_20F25_1145_LDO/documentation/
 
     - name: Download dir documentation
       get_url:
@@ -38,17 +38,17 @@
     - name: Download dir licensemanager
       get_url:
         url: https://raw.githubusercontent.com/lucaspinacci41/MyProject/master/licensemanager
-        dest: ~/mcxptt_deploy_20F25_1145_LDO
+        dest: ~/mcxptt_deploy_20F25_1145_LDO/licensemanager/
 
     - name: Download dir releasenotes
       get_url:
         url: https://raw.githubusercontent.com/lucaspinacci41/MyProject/master/releasenotes
-        dest: ~/mcxptt_deploy_20F25_1145_LDO
+        dest: ~/mcxptt_deploy_20F25_1145_LDO/releasenotes/
         
     - name: Download dir scripts
       get_url:
         url: https://raw.githubusercontent.com/lucaspinacci41/MyProject/master/scripts
-        dest: ~/mcxptt_deploy_20F25_1145_LDO       
+        dest: ~/mcxptt_deploy_20F25_1145_LDO/scripts/       
 
     - name: Download file content.txt
       get_url:
