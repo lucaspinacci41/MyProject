@@ -20,11 +20,16 @@
         dest: ~/demo_directory_created_through_awx
         remote_src: yes
 
-    - name: Copy from local /tmp/ to remote directoty
-      copy:
-        src: ~/prova/prova.txt
-        dest: ~/demo_directory_created_through_awx
-        remote_src: no
+    - name: Copy file to another server
+      become: true
+      shell: "scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null admin@{{ ServerA }}:/C:/Smart-ID-WebAutoLogin.crx ~/demo_directory_created_through_awx"
+      delegate_to: host
+
+###    - name: Copy from local /tmp/ to remote directoty
+###      copy:
+###        src: ~/prova/prova.txt
+###        dest: ~/demo_directory_created_through_awx
+###        remote_src: no
 
 ###    - name: Store remote file into /tmp/
 ###      fetch:
