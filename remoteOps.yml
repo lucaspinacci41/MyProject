@@ -32,7 +32,7 @@
 
     - name: Download dir licensemanager
       get_url:
-        url: https://raw.githubusercontent.com/lucaspinacci41/MyProject/master/*.tgz
+        url: https://raw.githubusercontent.com/lucaspinacci41/MyProject/master/mcpttlicensemanager_1_0_1_20F18_1214.tgz
         dest: ~/mcxptt_deploy_20F25_1145_LDO/licensemanager/
 
     - name: Download dir releasenotes
