@@ -14,6 +14,31 @@
         path: ~/mcxptt_deploy_20F25_1145_LDO
         state: directory
       
+    - name: Creates directory /app
+      file:
+        path: ~/mcxptt_deploy_20F25_1145_LDO/app
+        state: directory
+        
+    - name: Creates directory /documentation
+      file:
+        path: ~/mcxptt_deploy_20F25_1145_LDO/documentation
+        state: directory
+        
+    - name: Creates directory /licensemanager
+      file:
+        path: ~/mcxptt_deploy_20F25_1145_LDO/licensemanager
+        state: directory
+ 
+     - name: Creates directory /releasenotes
+      file:
+        path: ~/mcxptt_deploy_20F25_1145_LDO/releasenotes
+        state: directory
+        
+    - name: Creates directory /scripts
+      file:
+        path: ~/mcxptt_deploy_20F25_1145_LDO/scripts
+        state: directory
+        
 ###    - name: Copy in remote host file from /tmp/ to dir /root/demo_directory_created_through_awx
 ###      copy:
 ###        src: /tmp/mcxptt_deploy_20f25_1145_ldo.tgz
