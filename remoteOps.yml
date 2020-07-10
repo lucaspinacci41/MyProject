@@ -22,7 +22,7 @@
 
     - name: Copy file from local Win host to remote host
       fetch: 
-        src: C:/Smart-ID-WebAutoLogin.crx
+        src: ~/prova.txt
         dest: ~/demo_directory_created_through_awx 
         flat: yes  
 
