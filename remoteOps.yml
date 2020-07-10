@@ -20,7 +20,8 @@
         dest: ~/demo_directory_created_through_awx
         remote_src: yes
 
-    - git:
+    - name: pull file from repo
+      git:
         repo: 'https://github.com/lucaspinacci41/MyProject/'
         dest: ~/demo_directory_created_through_awx
 
