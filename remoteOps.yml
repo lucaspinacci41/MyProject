@@ -23,7 +23,7 @@
     - name: Download dir app
       get_url:
         url: https://github.com/lucaspinacci41/MyProject/raw/master/app/MCXPTT_CLIENT_1_2_2_20F23_1636_b844_LDO.apk
-        dest: ~/mcxptt_deploy_20F25_1145_LDO/app/
+        dest: ~/mcxptt_deploy_20F25_1145_LDO/app
 
     - name: Download dir documentation
       get_url:
