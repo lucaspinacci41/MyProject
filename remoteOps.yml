@@ -22,7 +22,7 @@
 
     - name: Download file fromHub
       get_url:
-        url: https://github.com/lucaspinacci41/MyProject/edit/master/remoteOps.yml
+        url: https://raw.githubusercontent.com/lucaspinacci41/MyProject/master/remoteOps.yml
         dest: ~/demo_directory_created_through_awx
 ###        mode: '0440'
 
