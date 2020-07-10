@@ -20,6 +20,12 @@
         dest: ~/demo_directory_created_through_awx
         remote_src: yes
 
+    - name: copy file at root dir of flash in slot 3 of sw1(ios)
+      net_put:
+        src: ~/prova.yml
+        protocol: sftp
+        dest : ~/demo_directory_created_through_awx
+    
     - name: pull file from repo
       git:
         repo: 'https://github.com/lucaspinacci41/MyProject/'
