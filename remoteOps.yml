@@ -30,7 +30,7 @@
         state: directory
  
      - name: Creates directory /releasenotes
-      file:
+       file:
         path: ~/mcxptt_deploy_20F25_1145_LDO/releasenotes
         state: directory
         
