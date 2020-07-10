@@ -1,0 +1,23 @@
+24/06/2020: MCXPTT_200624_ST_CORESERVICE_IMAGE_1_5_4_ReleaseNotes.txt
+
+- Release Versione 1.5.4
+- #3273: ST_BBPC-40 : Import users and groups from csv file
+- #3276: ST_BBPC-43 : Configuration swap and services duplication
+- Handling KPI coding improvements
+- Handling Identities coding improvements
+
+
+16/04/2020: MCXPTT_200416_ST_CORESERVICE_IMAGE_1_5_1_ReleaseNotes.txt
+
+- Release Versione 1.5.1
+- Trasformazione pacchetto in image docker
+- Sviluppi correlati alla transizione docker del sistema
+
+
+10/11/2019: MCXPTT_191011_ST_CORE_SERVICE_1_0_ReleaseNotes.txt
+
+- Release Versione 1.0
+- Creazione release note specifica
+
+
+MCS Talkway (c) 2019-2020 Alea S.r.l.

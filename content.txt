@@ -1,0 +1,105 @@
+### MCXPTT DEPLOY CONTENTS 20F25_1145
+
+Auto generated file for mcxptt_deploy_20F25_1145_LDO.tgz
+
+
+### FILES
+
+mcxptt_deploy_20F25_1145_LDO/
+|-- app
+|   `-- MCXPTT_CLIENT_1_2_2_20F23_1636_b844_LDO.apk
+|-- documentation
+|   |-- MCXPTT_191110_ConfigurationService_IWF.pdf
+|   |-- MCXPTT_200526_Dispatcher_User_Manual_Rev3_EN.pdf
+|   |-- MCXPTT_200624_Android_Client_User_Manual_Rev14_EN.pdf
+|   |-- MCXPTT_200624_Configurator_Parameters_Rev2_EN.pdf
+|   |-- MCXPTT_200624_Configurator_User_Manual_Rev4_EN.pdf
+|   `-- MCXPTT_200624_System_Setup_Rev3_EN.pdf
+|-- licensemanager
+|   `-- mcpttlicensemanager_1_0_1_20F18_1214.tgz
+|-- releasenotes
+|   |-- MCXPTT_200416_ST_FILEMANAGERSERVICE_IMAGE_1_5_1_ReleaseNotes.txt
+|   |-- MCXPTT_200624_ST_CONFIGURATOR_IMAGE_1_5_4_ReleaseNotes.txt
+|   |-- MCXPTT_200624_ST_CORESERVICE_IMAGE_1_5_4_ReleaseNotes.txt
+|   |-- MCXPTT_200624_ST_DISPATCHER_IMAGE_1_0_5_ReleaseNotes.txt
+|   |-- MCXPTT_200624_ST_IDMSSERVICE_IMAGE_1_5_4_ReleaseNotes.txt
+|   |-- MCXPTT_200624_ST_LICENSE_MANAGER_1_0_1_ReleaseNotes.txt
+|   |-- MCXPTT_200624_ST_MCPTTSERVER_1_2_2_ReleaseNotes.txt
+|   `-- MCXPTT_200624_ST_MCXPTT_CLIENT_1_2_2_ReleaseNotes.txt
+|-- scripts
+|   |-- config
+|   |   |-- apache.conf
+|   |   |-- services_configs.json
+|   |   `-- site_config.php
+|   |-- docker-compose.yml
+|   `-- export_test.json
+`-- setup.sh
+
+6 directories, 22 files
+
+
+### DEPLOY BINARY REFERENCES
+
+# BINARY 1 OF 2
+
+Desc    : MCXPTT Android Client
+Name    : MCXPTT_CLIENT_1_2_2_20F23_1636_B844_LDO.APK
+Ver     : 1_2_2_20F23
+Hash    : 5832b9b6439b1502b074aae4fadc71c169d166de86423bef218f4b855f87272d
+
+
+# BINARY 2 OF 2
+
+Name    : MCPTTLICENSEMANAGER_1_0_1_20F18_1214.TGZ
+Ver     : 1_0_1
+Hash    : 1063779986ed331791e2793e94d126f821bb0138e100ab9e9e73df4de9ceea4d
+
+
+### EXTERNAL REFERENCES
+
+Docker images requires access to 'aleasrl' hub.docker.com repository.
+
+
+# IMAGE 1 OF 6
+
+Name    : mcxptt_mcs
+Tag     : 1_2_2_RC
+SHA256  : 835a996b4fcbf92629fc3e81261ee07223c8b59adb97dce2e4c6832dfa2a8e76
+
+
+# IMAGE 2 OF 6
+
+Name    : mcxptt_coreservice
+Tag     : 1_5_4
+SHA256  : 421273d8ba9b5329426505f5b35ded52fd2fcbf32e5048df6ec88dfd8731d057
+
+
+# IMAGE 3 OF 6
+
+Name    : mcxptt_idmsservice
+Tag     : 1_5_4
+SHA256  : 49396bc5f2462dc41ffd398462787160dc32e1fd8d51d6dab3a3c009edbc8005
+
+
+# IMAGE 4 OF 6
+
+Name    : mcxptt_filemanagerservice
+Tag     : 1_5_1
+SHA256  : f53a26418aae4f6a4fc326e4b8b84abb7dfe50f8efa6b4585e0ddd1ef38676f1
+
+
+# IMAGE 5 OF 6
+
+Name    : mcxptt_configurator
+Tag     : 1_5_4_LDO_RC
+SHA256  : 50a57f093d8dcc0f43ac87464b5aa31ada08dab05f6f7b17cb5f3e5847f58864
+
+
+# IMAGE 6 OF 6
+
+Name    : mcxptt_dispatcher
+Tag     : 1_0_5_LDO_RC
+SHA256  : 8c136def65488758949492a8a5d60a142e825c16b14841a46976e64ab8ba5e73
+
+### END
+

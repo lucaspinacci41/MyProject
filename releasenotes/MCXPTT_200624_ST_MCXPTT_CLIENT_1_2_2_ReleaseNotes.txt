@@ -1,0 +1,127 @@
+24/06/2020: MCXPTT_200624_ST_MCXPTT_CLIENT_1_2_2_ReleaseNotes.txt
+
+- Android Application Versione 1.2.2
+- #3274: ST_BBPC-41  : Mobile Client App - Short group list
+- #3292: ST_BBPC-171 : Mobile Client app - first to answer need for "clear users list" button
+- #3293: ST_BBPC-172 : Mobile Client app - unable to un/register the client
+- #3294: ST_BBPC-173 : Mobile Client app - no video streaming with manual commencement group calls
+- #3296: ST_BBPC-175 : Mobile Client app - crash with floor control enabled video calls
+- #3297: ST_BBPC-176 : Mobile Client app - FC button disabled during first to answer call
+- #3283: ST_BBPC-50  : RTP performance test failure in Mobile Client app
+- #3289: ST_BBPC-168 : Mobile Client App - Need for "find" button for long contact list
+- #3305: Problema di visualizzazione tasto PTT su Ruggear 725
+- #3284: ST_BBPC-51 : Mobile Client app and MCDATA commands only available via dedicated menu 
+- fixed crash when unverified kms info are fetched
+- fixed background in black gui mode
+
+- TODO/KNOWN : #3285: ST_BBPC-52 : Mobile Client app crashes during download of large configurations
+- CANTREPRODUCE : #3290: ST_BBPC-169 : Mobile Client App - Attachments to MCDATA services trigger mobile device screen lock
+
+
+16/04/2020: MCXPTT_200416_ST_MCXPTT_CLIENT_1_2_0_ReleaseNotes.txt
+
+- Android Application Versione 1.2.0
+- Messe a punto e consolidamento
+- Persistenza database messages sds per utente
+- Lettura chiavi ECCSI da KMS
+- Crittografia audio su chiamate di gruppo
+- Crittografia audio su chiamate private
+
+
+17/02/2020: MCXPTT_200217_ST_MCXPTT_CLIENT_1_1_5_ReleaseNotes.txt
+
+- Android Application Versione 1.1.5
+- Fix riferimenti a librerie dinamiche non presenti su Puma T4 
+
+
+29/11/2019: MCXPTT_191129_ST_MCXPTT_CLIENT_1_1_4_ReleaseNotes.txt
+
+- Android Application Versione 1.1.4
+- fix su RTP Audio Time field sui pacchetti AMR aggregati (metodo di calcolo)
+
+
+27/11/2019: MCXPTT_191127_ST_MCXPTT_CLIENT_1_1_3_ReleaseNotes.txt
+
+- Android Application Versione 1.1.3
+- bug fix su RTP Audio Time field sui pacchetti AMR aggregati
+
+
+10/11/2019: MCXPTT_191110_ST_MCXPTT_CLIENT_1_1_0_ReleaseNotes.txt
+
+- Android Application Versione 1.1.0
+- Gestione gruppi a funzionalità multipla audio/video/data
+- Gestione IWF gestione a standard
+- bug fix Mantis id #283,#300,#303,#310,#309,#311,#313,#316,#317
+
+
+25/10/2019: MCS_191025_ST_MCXPTT_ReleaseNotes_Rev25.txt
+
+- Android Application Versione 1.0.56
+- Adeguamento a IPv6
+- Fix minori
+
+
+19/09/2019: MCS_190919_ST_MCXPTT_ReleaseNotes_Rev24.txt
+
+- Android Application Versione 1.0.55
+- Adeguamento agli standard di segnalazione e controllo MB2/Multicast
+- Fix minori
+
+
+05/09/2019: MCS_190905_ST_MCXPTT_ReleaseNotes_Rev23.txt
+
+- Android Application Versione 1.0.51
+- refactor caricamento configurazione da bootstrap (bms) 
+- refactor caricamento configurazione cms e gms
+- sip custom headers per gestione qci lato partecipant
+- miglioramento ui gestione video streams, video tx ed rx full screen
+- gestione congestion control su trasmissioni video
+- bug fix #0000291,#0000292,#0000293,#0000294,#0000288
+ 
+ 
+16/07/2019: MCS_190716_ST_MCXPTT_ReleaseNotes_Rev21.txt       
+
+- Android Application Versione 1.0.41
+- Black reskin
+
+
+01/06/2019: MCS_190601_ST_MCXPTT_ReleaseNotes_Rev20.txt       
+
+- Android Application Versione 1.0.40
+- miglioramento dialogs di chiamata
+- miglioramento gestione delle situazioni di rete non affidabile
+- miglioramento procedura di client logout 
+- miglioramento procedure di chiamata video privata
+- attivazione opzionale per plugtest di tutte le combinazioni di chiamata privata audio e video
+- supporto audio durante le sessioni video private ptt
+- IWF: fix gestione trama amr-wb
+- IWF: fix gestione pacchettizzazione amr-wb
+- [MCXPTT AS 0000279]: MCX AS: non e' possibile fare chiamate individuali video con transmission control
+- [MCXPTT AS 0000278]: MCX AS: mancata cancellazione notifica Emergenza/IP sui called a chiamata conclusa in caso di chiamata gruppo prearranged
+- [MCXPTT AS 0000277]: MCX AS: INVITE erroneamente inviata dal controlling al chiamante in caso di chiamata gruppo chat pre-established
+- [MCXPTT AS 0000275]: MCX AS: non e' possibile fare chiamate individuali (voce o video) di tipo "automatic"
+- [MCXPTT AS 0000276]: MCX AS: mancate notifiche sul mittente del messaggio in caso di SDS individuali
+- miglioramento gestione pre-established calls
+- refactor amr-wb packetization
+- gestione accodamenti floor control 
+- [MCXPTT AS 0000280]: MCX AS: stream video non funziona in chiamate di gruppo video di tipo prearranged
+- Gestione SSRC (modulo 65536) in trasmissione e revisione packet ordering
+- Implementazione detect del "long jump” rtp
+- Rimozione degli fmpt AMR-WB non riconosciuti in negoziazione
+  
+
+21/05/2019: MCS_190521_ST_MCXPTT_ReleaseNotes_Rev19.txt   
+
+- Android Application Versione 1.0.36
+- Adeguamento tracciati a specifiche MCX Release 15
+- Consolidamento
+
+
+25/03/2019: MCS_190325_ST_R12019_MCXPTT_ReleaseNotes_Rev18.txt
+
+- Android Application Versione 1.0.34
+- First application release
+
+
+
+MCS Talkway (c) 2020 Alea S.r.l.

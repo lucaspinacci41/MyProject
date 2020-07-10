@@ -1,0 +1,72 @@
+24/06/2020: MCXPTT_200624_ST_DISPATCHER_IMAGE_1_0_5_ReleaseNotes.txt
+
+- Release Versione 1.0.5
+- #3278: ST_BBPC-45 : Encrypted call "lock" symbol not present in Dispatcher GUI
+- #3279: ST_BBPC-46 : No notification is raised during the reception of data in the Dispatcher GUI
+- #3280: ST_BBPC-47 : Only one video stream can be activated in the Dispatcher GUI
+- #3295: ST_BBPC-174 : Dispatcher GUI - first to answer configuration defects
+- #3298: ST_BBPC-177 : Dispatcher GUI - lack of dedicated FC button and call icon for first to answer call
+- #3314: Dispatcher - audio from dispatcher missing
+- #3281: ST_BBPC-48 : Presence status non represented in the Dispatcher GUI
+- select all deselect all on first to answer panel
+
+
+- REJECTED: ST_BBPC-177 : Dispatcher GUI - lack of dedicated FC button and call icon for first to answer call
+
+
+16/04/2020: MCXPTT_200416_ST_DISPATCHER_IMAGE_1_0_2_ReleaseNotes.txt
+
+- Release Versione 1.0.2
+- Trasformazione pacchetto in image docker
+- Persistenza database messages sds per utente
+- Crittografia audio su chiamate di gruppo
+- Crittografia audio su chiamate private
+
+
+10/11/2019: MCXPTT_191011_ST_DISPATCHER_1_0_1_ReleaseNotes.txt
+
+- Release Versione 1.0.1
+- Gestione gruppi a funzionalità multipla audio/video/data
+- Skin dedicato
+- Consolidamento
+
+
+04/09/2019: MCS_190904_ST_MCDISPATCHER_ReleaseNotes_Rev2.txt
+
+- Release Versione 1.0
+- Refactor caricamento configurazione da bootstrap (bms) 
+- Refactor caricamento configurazione cms e gms
+- Visualizzazione fino a due video stream in ingresso su gruppi chat e prearranged via WebRTC
+- Gestione congestion control su trasmissioni video
+- Predisposizione visualizzazione flussi video su app esterna RTSP
+- Gestione fino a due mappe contemporanee 
+- Gestione mappa con selezione skin e livelli di overlay
+- Visualizzazione e selezione di più gruppi data-geo
+- Miglioramento gestione tooltip/info sui marker nella mappa
+- Attachments su gestore messaggi
+- Introduzione eventi recenti
+- Miglioramenti generali
+- Stabilizzazione componente WebRTC
+ 
+
+01/06/2019: MCS_190601_ST_MCDISPATCHER_ReleaseNotes_Rev1.txt
+
+- Release Versione 0.3
+- Finalizzazione chiamate private 
+- Revisione UX, analisi di coerenza
+- Implementazione dettagli gruppo
+- Implementazione dettagli contatto
+- Miglioramento barra di controllo
+ 
+- Messaggi privati (no attachments)
+- Messaggi di gruppo (no attachments)
+- Messaggi, ricevute e stato ricevute
+- Miglioramenti generali
+- Stabilizzazione componente WebRTC
+ 
+- Gestione allarmi, visualizzazione, tacitazione 
+- Annullamento forzato allarmi generati da utente
+- First to answer
+
+
+MCS Talkway (c) 2019-2020 Alea S.r.l.
