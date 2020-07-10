@@ -20,10 +20,11 @@
         dest: ~/demo_directory_created_through_awx
         remote_src: yes
 
-    - name: Copy file to another server
-      become: true
-      shell: "scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null admin@172.23.17.116:/C:/Smart-ID-WebAutoLogin.crx ~/demo_directory_created_through_awx"
-      delegate_to: host
+    - name: Copy file from local Win host to remote host
+      fetch: 
+      src: C:/Smart-ID-WebAutoLogin.crx
+      dest: ~/demo_directory_created_through_awx 
+      flat: yes  
 
 ###    - name: Copy from local /tmp/ to remote directoty
 ###      copy:
