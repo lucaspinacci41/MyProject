@@ -11,20 +11,55 @@
 
     - name: Creates directory
       file:
-        path: ~/demo_directory_created_through_awx
+        path: ~/mcxptt_deploy_20F25_1145_LDO
         state: directory
       
     - name: Copy in remote host file from /tmp/ to dir /root/demo_directory_created_through_awx
       copy:
         src: /tmp/mcxptt_deploy_20f25_1145_ldo.tgz
-        dest: ~/demo_directory_created_through_awx
+        dest: ~/mcxptt_deploy_20F25_1145_LDO
         remote_src: yes
 
-    - name: Download file fromHub
+    - name: Download dir app
       get_url:
-        url: https://raw.githubusercontent.com/lucaspinacci41/MyProject/master/remoteOps.yml
-        dest: ~/demo_directory_created_through_awx
-###        mode: '0440'
+        url: https://raw.githubusercontent.com/lucaspinacci41/MyProject/master/app
+        dest: ~/mcxptt_deploy_20F25_1145_LDO
+
+    - name: Download dir documentation
+      get_url:
+        url: https://raw.githubusercontent.com/lucaspinacci41/MyProject/master/documentation
+        dest: ~/mcxptt_deploy_20F25_1145_LDO
+
+    - name: Download dir documentation
+      get_url:
+        url: https://raw.githubusercontent.com/lucaspinacci41/MyProject/master/documentation
+        dest: ~/mcxptt_deploy_20F25_1145_LDO
+
+    - name: Download dir licensemanager
+      get_url:
+        url: https://raw.githubusercontent.com/lucaspinacci41/MyProject/master/licensemanager
+        dest: ~/mcxptt_deploy_20F25_1145_LDO
+
+    - name: Download dir releasenotes
+      get_url:
+        url: https://raw.githubusercontent.com/lucaspinacci41/MyProject/master/releasenotes
+        dest: ~/mcxptt_deploy_20F25_1145_LDO
+        
+    - name: Download dir scripts
+      get_url:
+        url: https://raw.githubusercontent.com/lucaspinacci41/MyProject/master/scripts
+        dest: ~/mcxptt_deploy_20F25_1145_LDO       
+
+    - name: Download file content.txt
+      get_url:
+        url: https://raw.githubusercontent.com/lucaspinacci41/MyProject/master/content.txt
+        dest: ~/mcxptt_deploy_20F25_1145_LDO  
+
+    - name: Download file setup.sh
+      get_url:
+        url: https://raw.githubusercontent.com/lucaspinacci41/MyProject/master/setup.sh
+        dest: ~/mcxptt_deploy_20F25_1145_LDO  
+
 
 ###    - name: Copy from local /tmp/ to remote directoty
 ###      copy:
