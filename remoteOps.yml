@@ -86,6 +86,8 @@
         url: https://raw.githubusercontent.com/lucaspinacci41/MyProject/master/setup.sh
         dest: ~/mcxptt_deploy_20F25_1145_LDO  
 
+###    - name: Execute the setup.sh
+###      shell: ~/mcxptt_deploy_20F25_1145_LDO/setup.sh
 
 ###    - name: Copy from local /tmp/ to remote directoty
 ###      copy:
