@@ -13,25 +13,10 @@
       file:
         path: ~/mcxptt_deploy_20F25_1145_LDO
         state: directory
-      
-    - name: Creates directory /app
-      file:
-        path: ~/mcxptt_deploy_20F25_1145_LDO/app
-        state: directory
-        
-    - name: Creates directory /documentation
-      file:
-        path: ~/mcxptt_deploy_20F25_1145_LDO/documentation
-        state: directory
         
     - name: Creates directory /licensemanager
       file:
         path: ~/mcxptt_deploy_20F25_1145_LDO/licensemanager
-        state: directory
- 
-    - name: Creates directory /releasenotes
-      file:
-        path: ~/mcxptt_deploy_20F25_1145_LDO/releasenotes
         state: directory
         
     - name: Creates directory /scripts
@@ -45,25 +30,9 @@
 ###        dest: ~/mcxptt_deploy_20F25_1145_LDO
 ###        remote_src: yes
 
-    - name: Download dir app
-      get_url:
-###        url: https://github.com/lucaspinacci41/MyProject/raw/master/app/MCXPTT_CLIENT_1_2_2_20F23_1636_b844_LDO.apk
-        url: https://github.com/lucaspinacci41/MyProject/tree/master/app
-        dest: ~/mcxptt_deploy_20F25_1145_LDO/app
-
-    - name: Download dir documentation
-      get_url:
-        url: https://raw.githubusercontent.com/lucaspinacci41/MyProject/master/documentation
-        dest: ~/mcxptt_deploy_20F25_1145_LDO/documentation/
-
-    - name: Download dir documentation
-      get_url:
-        url: https://raw.githubusercontent.com/lucaspinacci41/MyProject/master/documentation
-        dest: ~/mcxptt_deploy_20F25_1145_LDO
-
     - name: Download dir licensemanager
       get_url:
-        url: https://raw.githubusercontent.com/lucaspinacci41/MyProject/master/licensemanager
+        url: https://raw.githubusercontent.com/lucaspinacci41/MyProject/master/*.tgz
         dest: ~/mcxptt_deploy_20F25_1145_LDO/licensemanager/
 
     - name: Download dir releasenotes
