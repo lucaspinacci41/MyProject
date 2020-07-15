@@ -6,7 +6,7 @@
   tasks:
   - name: Creates deployment directory on target host
     file:
-      path: ~/"{{ item }}"
+      path: ~/mcxptt_deploy_20F25_1145_LDO
       state: directory
         
   - name: Creates subdirectory /licensemanager on target host
