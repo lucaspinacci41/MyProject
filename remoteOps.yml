@@ -1,62 +1,61 @@
 ---
 - name: remote operations
   hosts: all
+  vars:
+    deploy: mcxptt_deploy_20F25_1145_LDO
   tasks:
-    - name: read the content of dir /tmp/
-      command: "ls -lah /tmp/"
-      register: dir_out
-
-    - debug: var={{item}}
-      with_items: dir_out.stdout_lines
-
-    - name: Creates directory
+    - name: Creates deployment directory on target host
       file:
-        path: ~/mcxptt_deploy_20F25_1145_LDO
+        path: ~/"{{ item }}"
         state: directory
         
-    - name: Creates directory /licensemanager
+    - name: Creates subdirectory /licensemanager on target host
       file:
-        path: ~/mcxptt_deploy_20F25_1145_LDO/licensemanager
+        path: ~/"{{ item }}"/licensemanager
         state: directory
         
-    - name: Creates directory /scripts
+    - name: Creates subdirectory /scripts on target host
       file:
-        path: ~/mcxptt_deploy_20F25_1145_LDO/scripts
+        path: ~/"{{ item }}"/scripts
         state: directory
-        
-###    - name: Copy in remote host file from /tmp/ to dir /root/demo_directory_created_through_awx
-###      copy:
-###        src: /tmp/mcxptt_deploy_20f25_1145_ldo.tgz
-###        dest: ~/mcxptt_deploy_20F25_1145_LDO
-###        remote_src: yes
 
-    - name: Download dir licensemanager
+    - name: Download licensemanager on target host
       get_url:
         url: https://github.com/lucaspinacci41/MyProject/blob/master/licensemanager/mcpttlicensemanager_1_0_1_20F18_1214.tgz
-        dest: ~/mcxptt_deploy_20F25_1145_LDO/licensemanager/
+        dest: ~/"{{ item }}"/licensemanager/
 
     - name: Download dir releasenotes
       get_url:
         url: https://raw.githubusercontent.com/lucaspinacci41/MyProject/master/releasenotes
-        dest: ~/mcxptt_deploy_20F25_1145_LDO/releasenotes/
+        dest: ~/"{{ item }}"/releasenotes/
         
     - name: Download dir scripts
       get_url:
         url: https://raw.githubusercontent.com/lucaspinacci41/MyProject/master/scripts
-        dest: ~/mcxptt_deploy_20F25_1145_LDO/scripts/       
+        dest: ~/"{{ item }}"/scripts/       
 
     - name: Download file content.txt
       get_url:
         url: https://raw.githubusercontent.com/lucaspinacci41/MyProject/master/content.txt
-        dest: ~/mcxptt_deploy_20F25_1145_LDO  
+        dest: ~/"{{ item }}"  
 
     - name: Download file setup.sh
       get_url:
         url: https://raw.githubusercontent.com/lucaspinacci41/MyProject/master/setup.sh
-        dest: ~/mcxptt_deploy_20F25_1145_LDO  
+        dest: ~/"{{ item }}"  
+
+#    - name: read the content of dir /tmp/
+#      command: "ls -lah /tmp/"
+#      register: dir_out
+
+###    - name: Copy in remote host file from /tmp/ to dir /root/demo_directory_created_through_awx
+###      copy:
+###        src: /tmp/mcxptt_deploy_20f25_1145_ldo.tgz
+###        dest: ~/"{{ item }}"
+###        remote_src: yes
 
 ###    - name: Execute the setup.sh
-###      shell: ~/mcxptt_deploy_20F25_1145_LDO/setup.sh
+###      shell: ~/"{{ item }}"/setup.sh
 
 ###    - name: Copy from local /tmp/ to remote directoty
 ###      copy:
