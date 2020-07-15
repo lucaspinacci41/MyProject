@@ -4,45 +4,45 @@
   vars:
     deploy: mcxptt_deploy_20F25_1145_LDO
   tasks:
-    - name: Creates deployment directory on target host
-      file:
-        path: ~/"{{ item }}"
-        state: directory
+  - name: Creates deployment directory on target host
+    file:
+      path: ~/"{{ item }}"
+      state: directory
         
-    - name: Creates subdirectory /licensemanager on target host
-      file:
-        path: ~/"{{ item }}"/licensemanager
-        state: directory
+  - name: Creates subdirectory /licensemanager on target host
+    file:
+      path: ~/"{{ item }}"/licensemanager
+      state: directory
         
-    - name: Creates subdirectory /scripts on target host
-      file:
-        path: ~/"{{ item }}"/scripts
-        state: directory
+  - name: Creates subdirectory /scripts on target host
+    file:
+      path: ~/"{{ item }}"/scripts
+      state: directory
 
-    - name: Download licensemanager on target host
-      get_url:
-        url: https://github.com/lucaspinacci41/MyProject/blob/master/licensemanager/mcpttlicensemanager_1_0_1_20F18_1214.tgz
-        dest: ~/"{{ item }}"/licensemanager/
+  - name: Download licensemanager on target host
+    get_url:
+      url: https://github.com/lucaspinacci41/MyProject/blob/master/licensemanager/mcpttlicensemanager_1_0_1_20F18_1214.tgz
+      dest: ~/"{{ item }}"/licensemanager/
 
-    - name: Download dir releasenotes
-      get_url:
-        url: https://raw.githubusercontent.com/lucaspinacci41/MyProject/master/releasenotes
-        dest: ~/"{{ item }}"/releasenotes/
+  - name: Download dir releasenotes
+    get_url:
+      url: https://raw.githubusercontent.com/lucaspinacci41/MyProject/master/releasenotes
+      dest: ~/"{{ item }}"/releasenotes/
         
-    - name: Download dir scripts
-      get_url:
-        url: https://raw.githubusercontent.com/lucaspinacci41/MyProject/master/scripts
-        dest: ~/"{{ item }}"/scripts/       
+  - name: Download dir scripts
+    get_url:
+      url: https://raw.githubusercontent.com/lucaspinacci41/MyProject/master/scripts
+      dest: ~/"{{ item }}"/scripts/       
 
-    - name: Download file content.txt
-      get_url:
-        url: https://raw.githubusercontent.com/lucaspinacci41/MyProject/master/content.txt
-        dest: ~/"{{ item }}"  
-
-    - name: Download file setup.sh
-      get_url:
-        url: https://raw.githubusercontent.com/lucaspinacci41/MyProject/master/setup.sh
-        dest: ~/"{{ item }}"  
+  - name: Download file content.txt
+    get_url:
+      url: https://raw.githubusercontent.com/lucaspinacci41/MyProject/master/content.txt
+      dest: ~/"{{ item }}"
+      
+   - name: Download file setup.sh
+     get_url:
+       url: https://raw.githubusercontent.com/lucaspinacci41/MyProject/master/setup.sh
+       dest: ~/"{{ item }}"  
 
 #    - name: read the content of dir /tmp/
 #      command: "ls -lah /tmp/"
