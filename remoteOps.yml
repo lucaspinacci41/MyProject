@@ -3,6 +3,12 @@
   hosts: all
   vars:
     deploy: mcxptt_deploy_20F25_1145_LDO
+    licmngr: mcpttlicensemanager_.tgz
+    cmpfile: docker-compose.yml
+    conffile: export_test.json
+    apacheconf: apache.conf
+    srvcfg: services_configs.json
+    sitecfg: site_config.php
   tasks:
   - name: Creates deployment directory on target host
     file:
@@ -19,16 +25,41 @@
       path: "~/{{ deploy }}/scripts"
       state: directory
 
+  - name: Creates subdirectory /scripts/config on target host
+    file:
+      path: "~/{{ deploy }}/scripts/config"
+      state: directory
+
   - name: Download licensemanager on target host
     get_url:
-      url: https://github.com/lucaspinacci41/MyProject/blob/master/licensemanager/mcpttlicensemanager_1_0_1_20F18_1214.tgz
+      url: https://github.com/lucaspinacci41/MyProject/blob/master/licensemanager/{{ licmngr }}
       dest: "~/{{ deploy }}/licensemanager/"
         
-  - name: Download dir scripts
+  - name: Download file "docker-compose.yml"
     get_url:
-      url: https://raw.githubusercontent.com/lucaspinacci41/MyProject/master/scripts
-      dest: "~/{{ deploy }}/scripts/"       
+      url: https://raw.githubusercontent.com/lucaspinacci41/MyProject/master/{{ cmpfile }}
+      dest: "~/{{ deploy }}/scripts/"
       
+  - name: Download file "export_test.json"
+    get_url:
+      url: https://raw.githubusercontent.com/lucaspinacci41/MyProject/master/{{ conffile }}
+      dest: "~/{{ deploy }}/scripts/"
+      
+  - name: Download file "apache.conf"
+    get_url:
+      url: https://raw.githubusercontent.com/lucaspinacci41/MyProject/master/{{ apacheconf }}
+      dest: "~/{{ deploy }}/scripts/config/"
+      
+  - name: Download file "services_configs.json"
+    get_url:
+      url: https://raw.githubusercontent.com/lucaspinacci41/MyProject/master/{{ srvcfg }}
+      dest: "~/{{ deploy }}/scripts/config/"
+
+  - name: Download file "site_config.php"
+    get_url:
+      url: https://raw.githubusercontent.com/lucaspinacci41/MyProject/master/{{ sitecfg }}
+      dest: "~/{{ deploy }}/scripts/config/"
+
   - name: Download file setup.sh
     get_url:
       url: https://raw.githubusercontent.com/lucaspinacci41/MyProject/master/setup.sh
