@@ -6,12 +6,12 @@
   tasks:
   - name: Creates deployment directory on target host
     file:
-      path: ~/"{{ deploy }}"
+      path: ~/{{ deploy }}
       state: directory
         
   - name: Creates subdirectory /licensemanager on target host
     file:
-      path: ~/"{{ deploy }}"/licensemanager
+      path: ~/{{ deploy }}/licensemanager
       state: directory
         
   - name: Creates subdirectory /scripts on target host
