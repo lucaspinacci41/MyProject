@@ -39,10 +39,10 @@
       url: https://raw.githubusercontent.com/lucaspinacci41/MyProject/master/content.txt
       dest: ~/"{{ item }}"
       
-   - name: Download file setup.sh
-     get_url:
-       url: https://raw.githubusercontent.com/lucaspinacci41/MyProject/master/setup.sh
-       dest: ~/"{{ item }}"  
+  - name: Download file setup.sh
+    get_url:
+      url: https://raw.githubusercontent.com/lucaspinacci41/MyProject/master/setup.sh
+      dest: ~/"{{ item }}"  
 
 #    - name: read the content of dir /tmp/
 #      command: "ls -lah /tmp/"
