@@ -1,0 +1,73 @@
+{
+  "common": {
+    "database": {
+      "mongo": {
+        "name": "mcptt",
+        "host": "127.0.0.1",
+        "account": "",
+        "options": {}
+      },
+      "postgres": {
+        "host": "127.0.0.1",
+        "database": "mcptt",
+        "port": 5432,
+        "user": "postgres",
+        "password": "postgres"
+      }
+    },
+    "http-server": {
+      "bind_address": "0"
+    }
+  },
+  "mcxptt-core-service": {
+    "management": {
+      "license-manager-url": "http://127.0.0.1:14490",
+      "path": "/home/mcs/files/management/",
+      "upload_apk_path": "/home/mcs/files/apk/",
+      "upload_log": {
+        "base_path": "/home/mcs/files/upload_log/",
+        "devices": "/devices",
+        "server": "/server"
+      },
+      "websocket_proxy_path": "/home/mcs/config/proxy/"
+    }
+  },
+  "mcxptt-idms-service": {
+    "idms": {
+      "issuer": "https://127.0.0.1/idms",
+      "issuer_path": "/idms",
+      "clients": [
+        {
+          "client_id": "mcs",
+          "client_secret": "9ff9cf45-48bf-4640-8b6b-1b32e32f5b4c",
+          "application_type": "native",
+          "redirect_uris": [
+            "it.talkway.mcxptt://auth"
+          ],
+          "grant_types": [
+            "refresh_token",
+            "authorization_code"
+          ],
+          "revocation_endpoint_auth_method": "client_secret_basic",
+          "introspection_endpoint_auth_method": "client_secret_basic"
+        }
+      ],
+      "ttl": {
+        "AccessToken": 3600,
+        "IdToken": 3600,
+        "session": 86400,
+        "AuthorizationCode": 600
+      }
+    }
+  },
+  "mcxptt-file-manager-service": {
+    "management": {
+      "file_manager_path": "/home/mcs/files/upload/",
+      "file_event_path": "/home/mcs/files/events"
+    },
+    "file_manager": {
+      "file_retain_time": 86400,
+      "remove_old_file_cron": "0 0 0 * * *"
+    }
+  }
+}
